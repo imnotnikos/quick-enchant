@@ -53,3 +53,31 @@ quickenchant.admin : Required to use any of the setup or reload commands. Regula
 A Minecraft server running **Paper, Spigot, or Bukkit 1.21 or newer**.
 
 Java 21.
+
+# Installation
+## For Server Owners
+Navigate to the Releases page.
+
+Download the latest QuickEnchant.jar.
+
+Place the file into your server's /plugins/ directory.
+
+Restart your server or use a plugin loader to enable it.
+
+## For Developers (Building from Source)
+**If you want to modify the code or build it yourself, ensure you have Java 21 and Maven installed:**
+
+Clone the repository:
+
+Bash
+git clone https://github.com/imnotnikos/quick-enchant.git
+Build the project:
+Navigate to the project root and run:
+
+Bash
+mvn clean install
+Locate the JAR:
+The compiled plugin will be in the /target folder.
+
+**Configuration**
+On the first run, the plugin will generate a config.yml. You can edit this file to customize enchantment profiles, experience costs, and excluded enchantments. Use /qe reload to apply changes without restarting the server.

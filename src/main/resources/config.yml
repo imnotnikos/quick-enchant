@@ -1,0 +1,43 @@
+# QuickEnchant Configuration
+
+# Toggle the core features
+enable-quick-enchant: true
+enable-quick-disenchant: true
+
+# The cost in experience levels per click
+exp-level-cost: 1
+
+# If an item isn't in a profile, it uses vanilla enchants. 
+# You can exclude specific ones (e.g., curses or mending) from that random pool here.
+exclude-vanilla-enchants:
+  - "binding_curse"
+  - "vanishing_curse"
+
+# Profile System
+# Format: MATERIAL_NAME: "enchant1,enchant2": "level1,level2"
+# Note: If a material has multiple entries under it, the plugin picks one at random (rolls).
+table-profiles: 
+  default:
+    DIAMOND_SWORD:
+      "sharpness,unbreaking": "5,3"
+      "fire_aspect,looting": "2,3"
+    BOW:
+      "power,punch,flame": "5,2,1"
+  op_room:
+    NETHERITE_AXE:
+      "sharpness,efficiency": "10,10"
+
+# This section is managed by /qe link <profile>
+# Do not edit manually unless you know the coordinates.
+table-locations:
+  # example_world,100,64,-200: "op_room"
+
+# Language and Messages
+messages:
+  enabled: true
+  success: "&aItem successfully enchanted!"
+  disenchant-success: "&eItem disenchanted. You received experience!"
+  not-enough-exp: "&cYou need <cost> XP levels to enchant this!"
+  no-permission: "&cYou do not have permission to use this command."
+  invalid-material: "&c<material> is not a valid item!"
+  config-error: "&4Config Error: &cEnchantment '<enchant>' not found."

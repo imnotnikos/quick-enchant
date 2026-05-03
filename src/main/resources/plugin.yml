@@ -1,0 +1,12 @@
+name: QuickEnchant
+version: '1.4'
+main: com.imNikos.quickenchant.QuickEnchant
+description: Quick base-level enchanting by right-clicking an enchanting table.
+api-version: '1.21'
+
+commands:
+  quickenchant:
+    description: Add custom enchants to the QuickEnchant config.
+    aliases: [qe, quickenc]
+    permission: quickenchant.admin
+    permission-message: "You do not have permission to use this command."
